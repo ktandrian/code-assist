@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aplikasi Cuaca Sederhana</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-center mb-8">Aplikasi Cuaca Sederhana</h1>
+
+        <form method="POST" class="flex items-center space-x-4 mb-8">
+            <label for="city" class="mr-2">Masukkan Nama Kota:</label>
+            <input type="text" name="city" id="city" class="border border-gray-400 rounded-md px-3 py-2">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">Cari</button>
+        </form>
+
+        {% if weather %}
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold mb-4">Cuaca di {{ weather.city }}</h2>
+                <p class="text-lg">Suhu: <span class="font-bold">{{ weather.temperature }}</span>°C</p>
+                <p class="text-lg">Deskripsi: <span class="font-bold">{{ weather.description }}</span></p>
+                <img src="http://openweathermap.org/img/wn/{{ weather.icon }}@2x.png" alt="Weather Icon" class="w-16 h-16 mx-auto mt-4">
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

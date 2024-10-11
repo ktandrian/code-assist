@@ -16,7 +16,7 @@ def get_db_connection():
 def get_user(user_id):
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute(f"SELECT * FROM users WHERE id = {user_id}")
+    cursor.execute("SELECT * FROM users WHERE id = %s", (user_id))
     user = cursor.fetchone()
     conn.close()
 
