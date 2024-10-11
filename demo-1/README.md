@@ -23,7 +23,7 @@ Let's create a weather app from scratch using OpenWeather API.
    API_KEY = "YOUR_API_KEY"
    ```
 
-4. If Gemini also generates the HTML code, save it as "index.html".
+4. If Gemini also generates the HTML code, usually it will ask you to save it as "template/index.html". Let's deliberately save it as "index.html".
 
 5. If no HTML code is generated, enter this prompt:
    ```
@@ -43,7 +43,7 @@ Let's create a weather app from scratch using OpenWeather API.
 
    # Run the app
    python app.py
-  ```
+   ```
 
 8. Open browser and access [http://127.0.0.1:5000/](http://127.0.0.1:5000).
 
@@ -53,13 +53,13 @@ Let's create a weather app from scratch using OpenWeather API.
    ```
 
 10. Pass this prompt to Gemini:
-   ```
-   Ah parah, error nih! Errornya jinja2.exceptions.TemplateNotFound: index.html
-   ```
+    ```
+    Ah parah, error nih! Errornya jinja2.exceptions.TemplateNotFound: index.html
+    ```
 
 11. Follow the instructions to fix the app. Gemini should ask you to move the `index.html` file to the `templates` folder and restart the app.
 
-12. Enter any city in the input box and see the result.
+12. Enter any city in the input box and see the result (e.g., Medan, Jakarta, Jambi).
 
 13. Let's ask Gemini to redesign the UI using Bootstrap. Block the whole `index.html` file and enter this prompt:
     ```
